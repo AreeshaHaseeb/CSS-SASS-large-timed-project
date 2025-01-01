@@ -8,7 +8,7 @@
     align-items: center;
     text-align: center;
     font-family: $main-font;
-
+    width: 100%;
     .section-1-container {
         display: flex;
         flex-direction: column;
@@ -67,7 +67,7 @@
                     background-color: darken(#5474fd, 10%);
                     transform: scale(1.05);
                 }
-
+                
                 i {
                     margin-left: 8px;
                     font-size: 16px;
