@@ -67,7 +67,10 @@
                     background-color: darken(#5474fd, 10%);
                     transform: scale(1.05);
                 }
-                
+                &:focus {
+                    outline: 5px solid #fff;
+                    outline-offset: 5px;
+                }
                 i {
                     margin-left: 8px;
                     font-size: 16px;
