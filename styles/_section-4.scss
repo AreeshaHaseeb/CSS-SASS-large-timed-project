@@ -1,0 +1,195 @@
+@import 'fonts';
+
+.section-4 {
+    width: 100%;
+    height: 100vh;
+    background: url('../images/section-4-background.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .container {
+        max-width: 35rem;
+        width: 100%;
+        background-color: #232323;
+        padding: 40px;
+        border-radius: 5px;
+        text-align: left; 
+        margin-right: 40px;
+    }
+
+    .section-4-container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .container-villa {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+
+            h3 {
+                font-family: $link-title-font;
+                font-size: 1.3rem;
+                font-weight: 400;
+                color: #E8E8E8;
+                letter-spacing: 1.2px;
+            }
+
+            h2 {
+                font-family: $link-title-font;
+                font-size: 2rem;
+                font-weight: 700;
+                color: #ffffff;
+                letter-spacing: 1.5px;
+            }
+
+            p {
+                font-family: $main-font;
+                font-size: 1rem;
+                font-weight: 400;
+                color: #E8E8E8;
+                line-height: 1.6rem;
+                letter-spacing: 1px;
+                padding: 0 1rem 1.5rem 0;
+            }
+
+            .btn-book {
+                padding: 15px 25px;
+                background-color: #496BFE;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: $main-font;
+                font-weight: bold;
+                letter-spacing: 1px;
+                transition: 0.3s;
+                align-self: flex-start;
+
+                &:hover {
+                    background-color: darken(#496BFE, 10%);
+                    transform: scale(1.05);
+                }
+
+                &:focus {
+                    outline: 2px solid #fff;
+                    outline-offset: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section-4 {
+        height: auto;
+        padding: 40px 20px;
+        justify-content: center;
+
+        .container {
+            padding: 30px;
+            margin-right: 0;
+        }
+
+        .section-4-container {
+            padding: 20px;
+
+            .container-villa {
+                h3 {
+                    font-size: 1.2rem;
+                }
+
+                h2 {
+                    font-size: 1.8rem;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    line-height: 1.4rem;
+                    padding: 0 0 1rem 0;
+                }
+
+                .btn-book {
+                    padding: 12px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .section-4 {
+        padding: 20px;
+        justify-content: center;
+
+        .container {
+            padding: 20px;
+            margin-right: 0;
+        }
+
+        .section-4-container {
+            padding: 15px;
+
+            .container-villa {
+                h3 {
+                    font-size: 1.1rem;
+                }
+
+                h2 {
+                    font-size: 1.6rem;
+                }
+
+                p {
+                    font-size: 0.85rem;
+                    line-height: 1.3rem;
+                }
+
+                .btn-book {
+                    padding: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .section-4 {
+        padding: 15px;
+        justify-content: center;
+
+        .container {
+            padding: 15px;
+            margin-right: 0;
+        }
+
+        .section-4-container {
+            padding: 10px;
+
+            .container-villa {
+                h3 {
+                    font-size: 1rem;
+                }
+
+                h2 {
+                    font-size: 1.4rem;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                    line-height: 1.2rem;
+                }
+
+                .btn-book {
+                    padding: 8px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

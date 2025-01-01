@@ -1,0 +1,190 @@
+@import 'fonts';
+
+.section-3 {
+    width: 100%;
+    height: 100vh;
+    background: url('../images/section-3-background.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+
+    .container {
+        max-width: 35rem;
+        width: 100%;
+        background-color: #232323;
+        padding: 40px;
+        border-radius: 5px;
+        text-align: left; 
+        margin-left: 40px;
+    }
+    .section-3-container  {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .container-spain {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+            h3 {
+                font-family: $link-title-font;
+                font-size: 1.3rem;
+                font-weight: 400;
+                color: #E8E8E8;
+                letter-spacing: 1.2px;
+            }
+
+            h2 {
+                font-family: $link-title-font;
+                font-size: 2rem;
+                font-weight: 700;
+                color: #ffffff;
+                letter-spacing: 1.5px;
+            }
+
+            p {
+                font-family: $main-font;
+                font-size: 1rem;
+                font-weight: 400;
+                color: #E8E8E8;
+                line-height: 1.6rem;
+                letter-spacing: 1px;
+                padding: 0 1rem 1.5rem 0;
+            }
+
+            .btn {
+                padding: 15px 25px;
+                background-color: #496BFE;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: $main-font;
+                font-weight: bold;
+                letter-spacing: 1px;
+                transition: 0.3s;
+                align-self: flex-start; // Align button to the left
+
+                &:hover {
+                    background-color: darken(#496BFE, 10%);
+                    transform: scale(1.05);
+                }
+
+                &:focus {
+                    outline: 2px solid #fff;
+                    outline-offset: 2px;
+                }
+            }
+        }
+    }
+}
+
+/* Responsive Design */
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+    .section-3 {
+        height: auto;
+        padding: 40px 20px;
+
+        .container {
+            padding: 30px;
+        }
+
+        .container-layout {
+            padding: 20px;
+
+            .container-spain {
+                h3 {
+                    font-size: 1.2rem;
+                }
+
+                h2 {
+                    font-size: 1.8rem;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    line-height: 1.4rem;
+                    padding: 0 0 1rem 0;
+                }
+
+                .btn {
+                    padding: 12px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* Mobile Devices (480px) */
+@media (max-width: 480px) {
+    .section-3 {
+        padding: 20px;
+
+        .container {
+            padding: 20px;
+        }
+
+        .container-layout {
+            padding: 15px;
+
+            .container-spain {
+                h3 {
+                    font-size: 1.1rem;
+                }
+
+                h2 {
+                    font-size: 1.6rem;
+                }
+
+                p {
+                    font-size: 0.85rem;
+                    line-height: 1.3rem;
+                }
+
+                .btn {
+                    padding: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/* Smallest Screens (320px) */
+@media (max-width: 320px) {
+    .section-3 {
+        padding: 15px;
+
+        .container {
+            padding: 15px;
+        }
+
+        .container-layout {
+            padding: 10px;
+
+            .container-spain {
+                h3 {
+                    font-size: 1rem;
+                }
+
+                h2 {
+                    font-size: 1.4rem;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                    line-height: 1.2rem;
+                }
+
+                .btn {
+                    padding: 8px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
