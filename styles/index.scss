@@ -1,4 +1,4 @@
-@import 'fonts';
+
 @import 'nav';
 @import 'section-1';
 @import 'section-2';
@@ -8,3 +8,8 @@
 @import 'footer';
 
 
+
+body{
+    padding: 0;
+    margin: 0;
+}
