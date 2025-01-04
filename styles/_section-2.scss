@@ -1,38 +1,42 @@
 @import 'fonts';
+
+/* Main Layout */
 .container-layout {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: url('../images/section-2-background.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    .container-info {
-        max-width: 35rem;
-        width: 100%;
-        margin-left: 35px;
+}
 
-        h2 {
-            font-family: $link-title-font;
-            color: #ffffff;
-            font-size: 1.5rem;
-            font-weight: 400;
-            letter-spacing: 1.4px;
-            padding: 0 1rem 1rem 0;
-        }
+/* Text Container */
+.container-info {
+    max-width: 35rem;
+    width: 100%;
+    margin-left: 50px;
 
-        p {
-            font-family: $main-font;
-            color: #E8E8E8;
-            font-size: 13px;
-            letter-spacing: 1.6px;
-            line-height: 1.5rem;
-            padding: 0 1rem 1.5rem 0;
-        }
+    h2 {
+        font-family: $link-title-font;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 1.4px;
+        padding: 0 1rem 1rem 0;
+    }
+
+    p {
+        font-family: $main-font;
+        color: #E8E8E8;
+        font-size: 13px;
+        letter-spacing: 1.6px;
+        line-height: 1.5rem;
+        padding: 0 1rem 1.5rem 0;
     }
 }
 
-// Images Container
+/* Image Container */
 .container-images {
     max-width: 20rem;
     width: 100%;
@@ -40,24 +44,20 @@
     flex-direction: column;
     justify-content: flex-end;
     margin: 0 auto;
-
-    .image-top {
-        max-width: 20rem;
-        width: 100%;
-        min-height: 13.75rem;
-        margin-bottom: 0.3rem;
-        padding: 5px 0px;
-    }
-
-    .image-bottom {
-        max-width: 20rem;
-        width: 100%;
-        min-height: 14.38rem;
-        transform: translateX(30%);
-    }
 }
 
-// Button Styles
+.image-top,
+.image-bottom {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Remove alignment issues */
+.image-bottom {
+    transform: none;
+}
+
+/* Button Styles */
 .btn-book {
     padding: 15px 25px;
     background-color: #496BFE;
@@ -70,203 +70,186 @@
     font-weight: bold;
     letter-spacing: 1px;
     transition: 0.3s;
-
-    &:hover {
-        background-color: darken(#496BFE, 10%);
-        transform: scale(1.05);
-    }
-
-    &:focus {
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-    }
 }
 
-// Footer Section
+.btn-book:hover {
+    background-color: darken(#496BFE, 10%);
+    transform: scale(1.05);
+}
+
+.btn-book:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Footer Section */
 .section-2-footer {
     background-color: #333333;
-    padding: 20px 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .footer-center {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-
-        .promo-select {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-
-            i {
-                font-size: 2rem;
-            }
-
-            h3 {
-                font-family: $main-font;
-                font-size: 1rem;
-                color: #ffffff;
-                letter-spacing: 1.2px;
-            }
-        }
-
-        .curved-line {
-            width: 200px;
-            height: 50px;
-        }
-
-        path {
-            stroke: white;
-            stroke-width: 2;
-            fill: none;
-        }
-    }
 }
 
-// Responsive Design
+.footer-center {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Footer Promo Styles */
+.promo-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-select i {
+    font-size: 2rem;
+}
+
+.promo-select h3 {
+    font-family: $main-font;
+    font-size: 1rem;
+    color: #ffffff;
+    letter-spacing: 1.2px;
+}
+
+/* Curved Line */
+.curved-line {
+    width: 200px;
+    height: 50px;
+}
+
+.curved-line path {
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Responsive Design */
+
+/* Tablets (768px) */
 @media (max-width: 768px) {
     .container-layout {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .container-info {
+        margin: 0;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 1.4rem;
+            padding: 0 1rem;
+        }
+    }
+
+    .container-images {
+        max-width: 100%;
         gap: 15px;
+    }
 
-        .container-info {
-            margin-left: 0;
+    .image-bottom {
+        transform: none;
+    }
 
-            h2 {
-                font-size: 1.3rem;
-            }
-
-            p {
-                font-size: 12px;
-                line-height: 1.4rem;
-                padding: 0 1rem 1rem 0;
-            }
-        }
-
-        .container-images {
-            transform: none;
-            align-items: center;
-
-            .image-bottom {
-                transform: none;
-            }
-        }
-
-        .btn-book {
-            width: 100%;
-        }
+    .btn-book {
+        width: auto;
     }
 
     .section-2-footer {
         padding: 15px;
+    }
 
-        .footer-center {
-            flex-direction: column;
-            gap: 20px;
+    .footer-center {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-            .promo-select {
-                h3 {
-                    font-size: 0.9rem;
-                }
+    .promo-select h3 {
+        font-size: 0.9rem;
+    }
 
-                i {
-                    font-size: 1.5rem;
-                }
-            }
+    .promo-select i {
+        font-size: 1.5rem;
+    }
 
-            .curved-line {
-                width: 150px;
-                height: 40px;
-            }
-        }
+    .curved-line {
+        width: 150px;
+        height: 40px;
     }
 }
 
+/* Mobile Devices (480px) */
 @media (max-width: 480px) {
     .container-layout {
         padding: 20px;
         height: auto;
     }
 
-    .container-info {
-        h2 {
-            font-size: 1.2rem;
-        }
+    .container-info h2 {
+        font-size: 1.2rem;
+    }
 
-        p {
-            font-size: 12px;
-            padding: 0 10px 1rem 10px;
-        }
+    .container-info p {
+        font-size: 12px;
+        padding: 0 10px;
     }
 
     .container-images {
-        max-width: 100%;
         gap: 10px;
+    }
 
-        .image-top,
-        .image-bottom {
-            max-width: 100%;
-            height: auto;
-        }
+    .image-top,
+    .image-bottom {
+        width: 100%;
+    }
+
+    .btn-book {
+        width: 100%;
     }
 
     .section-2-footer {
-        padding: 10px;
+        padding: 20px;
+        width: 100%;
+    }
 
-        .footer-center {
-            gap: 15px;
+    .promo-select h3 {
+        font-size: 0.8rem;
+    }
 
-            .promo-select {
-                h3 {
-                    font-size: 0.8rem;
-                }
+    .promo-select i {
+        font-size: 1.3rem;
+    }
 
-                i {
-                    font-size: 1.3rem;
-                }
-            }
-
-            .curved-line {
-                width: 120px;
-                height: 30px;
-            }
-        }
+    .curved-line {
+        width: 120px;
+        height: 30px;
     }
 }
 
+/* Small Screens (320px) */
 @media (max-width: 320px) {
     .container-layout {
         padding: 15px;
-        height: auto;
     }
 
-    .container-info {
-        h2 {
-            font-size: 1rem;
-        }
-
-        p {
-            font-size: 11px;
-            padding: 0 5px 1rem 5px;
-        }
+    .container-info h2 {
+        font-size: 1rem;
     }
 
-    .container-images {
-        flex-direction: column;
-        gap: 8px;
-
-        .image-top,
-        .image-bottom {
-            max-width: 100%;
-            height: auto;
-            transform: none;
-            padding: 0;
-        }
+    .container-info p {
+        font-size: 11px;
     }
 
     .btn-book {
@@ -275,26 +258,19 @@
     }
 
     .section-2-footer {
-        padding: 10px;
+        padding: 20px;
+    }
 
-        .footer-center {
-            flex-direction: column;
-            gap: 10px;
+    .promo-select h3 {
+        font-size: 0.7rem;
+    }
 
-            .promo-select {
-                h3 {
-                    font-size: 0.7rem;
-                }
+    .promo-select i {
+        font-size: 1.2rem;
+    }
 
-                i {
-                    font-size: 1.3rem;
-                }
-            }
-
-            .curved-line {
-                width: 100px;
-                height: 25px;
-            }
-        }
+    .curved-line {
+        width: 100px;
+        height: 25px;
     }
 }

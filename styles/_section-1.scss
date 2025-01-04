@@ -1,5 +1,6 @@
 @import 'fonts';
 
+/* Section 1 */
 .section-1 {
     height: 100vh;
     background: url('../images/section-1-background.png') no-repeat center center/cover;
@@ -9,173 +10,177 @@
     text-align: center;
     font-family: $main-font;
     width: 100%;
+}
+
+/* Section 1 Container */
+.section-1-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Title Styles */
+.section-1-container .title {
+    font-family: $main-font;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+.section-1-container .title h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-1-container .title h3 {
+    font-size: 1.3rem;
+    letter-spacing: 8px;
+}
+
+/* Search Bar */
+.section-1-container .search-bar {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.section-1-container .search-bar input {
+    flex: 1;
+    width: 500px;
+    padding: 15px;
+    font-size: 13px;
+    text-align: center;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    letter-spacing: 3px;
+}
+
+.section-1-container .search-bar .btn-search {
+    padding: 15px 25px;
+    background-color: #5474fd;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    font-family: $link-title-font;
+    letter-spacing: 2px;
+}
+
+.section-1-container .search-bar .btn-search:hover {
+    background-color: darken(#5474fd, 10%);
+    transform: scale(1.05);
+}
+
+.section-1-container .search-bar .btn-search:focus {
+    outline: 5px solid #fff;
+    outline-offset: 5px;
+}
+
+.section-1-container .search-bar .btn-search i {
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+
+/* Tablet View (768px) */
+@media (max-width: 768px) {
     .section-1-container {
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
-
-        .title {
-            font-family: $main-font;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 13px;
-
-            h1 {
-                font-size: 2.5rem;
-                font-weight: bold;
-                letter-spacing: 3px;
-            }
-
-            h3 {
-                font-size: 1.3rem;
-                letter-spacing: 8px;
-            }
-        }
-
-        .search-bar {
-            display: flex;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            overflow: hidden;
-
-            input {
-                flex: 1;
-                width: 500px;
-                padding: 15px;
-                font-size: 13px;
-                text-align: center;
-                border: none;
-                outline: none;
-                box-sizing: border-box;
-                letter-spacing: 3px;
-            }
-
-            .btn-search {
-                padding: 15px 25px;
-                background-color: #5474fd;
-                color: #fff;
-                border: none;
-                cursor: pointer;
-                font-size: 16px;
-                transition: 0.3s;
-                font-family: $link-title-font;
-                letter-spacing: 2px;
-
-                &:hover {
-                    background-color: darken(#5474fd, 10%);
-                    transform: scale(1.05);
-                }
-                &:focus {
-                    outline: 5px solid #fff;
-                    outline-offset: 5px;
-                }
-                i {
-                    margin-left: 8px;
-                    font-size: 16px;
-                }
-            }
-        }
+        gap: 25px;
     }
 
-    // Responsive styles
-    @media (max-width: 768px) {
-        .section-1-container {
-            gap: 25px;
-
-            .title {
-                h1 {
-                    font-size: 2rem;
-                    letter-spacing: 2px;
-                }
-
-                h3 {
-                    font-size: 1rem;
-                    letter-spacing: 5px;
-                }
-            }
-
-            .search-bar {
-                flex-direction: column;
-                gap: 10px;
-
-                input {
-                    width: 100%;
-                    padding: 12px;
-                    font-size: 14px;
-                }
-
-                .btn-search {
-                    width: 100%;
-                    padding: 12px;
-                    font-size: 14px;
-                }
-            }
-        }
+    .section-1-container .title h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
     }
 
-    @media (max-width: 480px) {
-        .section-1-container {
-            gap: 20px;
-
-            .title {
-                h1 {
-                    font-size: 1.8rem;
-                    letter-spacing: 1px;
-                }
-
-                h3 {
-                    font-size: 0.9rem;
-                    letter-spacing: 3px;
-                }
-            }
-
-            .search-bar {
-                gap: 8px;
-
-                input {
-                    padding: 10px;
-                    font-size: 12px;
-                }
-
-                .btn-search {
-                    padding: 10px;
-                    font-size: 12px;
-                }
-            }
-        }
+    .section-1-container .title h3 {
+        font-size: 1rem;
+        letter-spacing: 5px;
     }
 
-    @media (max-width: 320px) {
-        .section-1-container {
-            gap: 15px;
+    .section-1-container .search-bar {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 10px;
+    }
 
-            .title {
-                h1 {
-                    font-size: 1.5rem;
-                    letter-spacing: 0.5px;
-                }
+    .section-1-container .search-bar input {
+        width: 100%; /* Full width */
+        padding: 12px;
+        font-size: 14px;
+    }
 
-                h3 {
-                    font-size: 0.8rem;
-                    letter-spacing: 2px;
-                }
-            }
+    .section-1-container .search-bar .btn-search {
+        width: 100%; /* Full width */
+        padding: 12px;
+        font-size: 14px;
+    }
+}
 
-            .search-bar {
-                gap: 6px;
+/* Mobile View (480px) */
+@media (max-width: 480px) {
+    .section-1-container {
+        gap: 20px;
+    }
 
-                input {
-                    padding: 8px;
-                    font-size: 12px;
-                }
+    .section-1-container .title h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
 
-                .btn-search {
-                    padding: 8px;
-                    font-size: 12px;
-                }
-            }
-        }
+    .section-1-container .title h3 {
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+    }
+
+    .section-1-container .search-bar {
+        gap: 8px; /* Reduce gap */
+    }
+
+    .section-1-container .search-bar input {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .section-1-container .search-bar .btn-search {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Smallest Screens (320px) */
+@media (max-width: 320px) {
+    .section-1-container {
+        gap: 15px;
+    }
+
+    .section-1-container .title h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .section-1-container .title h3 {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .section-1-container .search-bar {
+        gap: 6px; /* Further reduce gap */
+    }
+
+    .section-1-container .search-bar input {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .section-1-container .search-bar .btn-search {
+        padding: 8px;
+        font-size: 12px;
     }
 }
